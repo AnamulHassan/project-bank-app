@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="icon/bank.png" type="image/x-icon" />
+    <title>Your Account</title>
+    <!-- -------------Tailwind------------- -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h1
+        class="text-6xl tracking-tight font-bold text-center mt-20 mb-14 text-emerald-600"
+      >
+        Private Bank
+      </h1>
+    </header>
+    <main>
+      <section
+        class="w-10/12 mx-auto bg-emerald-50 bg-opacity-50 rounded-lg px-8 py-10 border-2 border-emerald-100"
+      >
+        <div class="flex justify-between">
+          <h3 class="text-2xl font-semibold pb-5">
+            Welcome again, <span id="user-name">nae</span>
+          </h3>
+          <button
+            class="bg-red-200 hover:bg-red-600 px-8 text-lg font-bold text-slate-600 hover:text-slate-50 rounded-xl mt-2"
+            id="btn-logout"
+          >
+            logout
+          </button>
+        </div>
+        <div class="grid grid-cols-2">
+          <div class="px-4 py-5">
+            <h2 class="text-xl font-bold text-slate-700">Current balance</h2>
+            <p class="text-md font-semibold text-slate-500">
+              As of <span id="dd-mm-yy"></span>
+            </p>
+          </div>
+          <div class="flex items-center px-10">
+            <h2 class="text-5xl font-bold">
+              $<span class="text-slate-500" id="user-current-balance"
+                >100000</span
+              >
+            </h2>
+          </div>
+        </div>
+
+        <!-- -----------Deposit----------- -->
+        <div class="grid grid-cols-2 mt-5 gap-4">
+          <div class="bg-rose-50 px-6 py-8 rounded-3xl rounded-br">
+            <h3 class="text-3xl font-bold tracking-tight text-slate-600">
+              Deposit Balance
+            </h3>
+            <h2 class="text-5xl font-semibold tracking-tight mt-2">
+              $<span class="text-slate-600" id="initial-deposit-balance"
+                >000</span
+              >
+            </h2>
+          </div>
+          <div class="bg-rose-50 px-6 py-4 rounded-3xl rounded-bl">
+            <h3 class="text-2xl font-bold tracking-tight mb-1 text-slate-600">
+              Deposit Some Money
+            </h3>
+            <label
+              class="text-lg font-semibold tracking-tight text-slate-600"
+              for="input-deposit"
+              >Put your deposit amount</label
+            >
+            <input
+              class="block mt-4 px-3 py-2 w-full rounded-xl text-center text-lg font-semibold outline-rose-200"
+              type="number"
+              placeholder="Amount"
+              id="input-deposit"
+            />
+            <button
+              class="bg-emerald-300 hover:bg-emerald-600 px-6 py-2 text-xl font-bold text-slate-600 hover:text-slate-50 rounded-xl mt-2"
+              id="btn-deposit"
+            >
+              Deposit
+            </button>
+          </div>
+        </div>
+        <!-- -----------------Withdraw----------------- -->
+        <div class="grid grid-cols-2 mt-4 gap-4">
+          <div class="bg-slate-200 px-6 py-8 rounded-3xl rounded-tr">
+            <h3 class="text-3xl font-bold tracking-tight text-slate-600">
+              Withdraw Balance
+            </h3>
+            <h2 class="text-5xl font-semibold tracking-tight mt-2">
+              $<span class="text-slate-600" id="initial-withdraw-balance"
+                >000</span
+              >
+            </h2>
+          </div>
+          <div class="bg-slate-200 px-6 py-4 rounded-3xl rounded-tl">
+            <h3 class="text-2xl font-bold tracking-tight mb-1 text-slate-600">
+              Withdraw Some Money
+            </h3>
+            <label
+              class="text-lg font-semibold tracking-tight text-slate-600"
+              for="input-withdraw"
+              >Put your withdraw amount</label
+            >
+            <input
+              class="block mt-4 px-3 py-2 w-full rounded-xl text-center text-lg font-semibold outline-slate-300"
+              type="number"
+              placeholder="Amount"
+              id="input-withdraw"
+            />
+            <button
+              class="bg-emerald-300 hover:bg-emerald-600 px-6 py-2 text-xl font-bold text-slate-600 hover:text-slate-50 rounded-xl mt-2"
+              id="btn-withdraw"
+            >
+              Deposit
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ----------------JavaScript---------------- -->
+    <script src="js/variable.js"></script>
+    <script src="js/user-info.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
